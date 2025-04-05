@@ -1,54 +1,66 @@
-# React + TypeScript + Vite
+# 💊 Pill Reminder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple project built with **React + Vite + Tailwind CSS** that helps users remember if they've taken their pill for the day. It uses **Context API with localStorage** to persist data locally and avoid multiple records on the same day.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🔗 Live Demo
 
-## Expanding the ESLint configuration
+👉 [Click here to access the live app](https://pills-production.up.railway.app/)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## ✨ Features
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- ✅ Beautiful and responsive interface with Tailwind CSS
+- 💾 Stores whether the pill has already been taken (locally)
+- 📆 Checks if the user has taken their pill **today**
+- 🧠 Uses Context API to manage global state
+- ⚡️ Optimized performance using `useMemo` and `useEffect`
+
+---
+
+## 📸 Preview
+
+<div align="center">
+  <img src="https://github.com/thomassds/pills/blob/main/public/preview.png" alt="preview" width="400"/>
+  <img src="https://github.com/thomassds/pills/blob/main/public/preview2.png" alt="preview" width="400"/>
+</div>
+
+---
+
+## 🚀 Technologies
+
+- [React](https://reactjs.org)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- Context API
+- TypeScript
+
+---
+
+## 📦 Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/your-username/pill-reminder.git
+
+# Enter the project folder
+cd pill-reminder
+
+# Install the dependencies
+npm install
+
+# Run the project
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🧠 Project Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+pill-reminder/
+├── public/ # Static files
+├── src/
+│ ├── assets/ # Images
+│ ├── context/ # Context API (global state)
+│ ├── pages/ # App pages
+│ ├── App.tsx # Main component
+│ ├── index.css # Global styles + Tailwind
+│ └── main.tsx # Entry point
