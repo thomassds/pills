@@ -27,7 +27,7 @@ export const Home = () => {
 
       {lastTaken?.getDate() === new Date().getDate() && (
         <div className="flex flex-col items-center justify-center gap-12">
-          <img src={Already} alt="Remedio" className="w-1/2" />
+          <img src={Already} alt="Remedio" className="w-1/2 animate-bounce" />
 
           <strong className="text-center text-2xl font-bold">
             Você tomou seu remedio hoje as {lastTaken?.getHours()}:
